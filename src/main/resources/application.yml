@@ -1,0 +1,15 @@
+# 스프링부트 환경설정
+server:
+  port: 8088
+
+logging:
+  level:
+    org.springframework: DEBUG
+
+spring:
+  messages:
+    basename: messages
+  # Spring boot swagger 사용 시 몇 라이브 충돌오류로 아래의 내용 추가
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
